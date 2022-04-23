@@ -54,7 +54,6 @@ namespace ParcialZ.Controllers
                 TempData["Name"] = ticket.Name;
                 TempData["Document"] = ticket.Document;
                 TempData["Date"] = ticket.DateTime;
-                //TODO : time and entrance
                 return RedirectToAction(nameof(CheckTicket), new { Id = ticket.Id });
             }
             else
@@ -63,26 +62,6 @@ namespace ParcialZ.Controllers
                 return RedirectToAction(nameof(EditCheckTicket), new { Id = ticket.Id });
             }
         }
-
-
-        //public async Task<IActionResult> TicketDetails(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    Ticket ticket = await _context.Tickets
-        //        .Include(t => t.Entrance).
-        //        FirstOrDefault(t => t.Id ==);
-        //    if (ticket == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(ticket);
-        //}
-
         public async Task<IActionResult> EditCheckTicket(int? id)
         {
             if (id == null)
@@ -107,7 +86,7 @@ namespace ParcialZ.Controllers
                 Document = ticket.Document,
                 Id = ticket.Id,
                 Name = ticket.Name,
-                DateTime = (DateTime)ticket.DateTime,
+                DateTime = DateTime.Now,
                 WasUsed = true,
                 Entrances = await _combosHelper.GetComboEntrancesAsync(),
             };
