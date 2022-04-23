@@ -29,24 +29,11 @@ namespace ParcialZ.Data
                     {
                         Document = null,
                         Entrance = null,
-                        DateTime = DateTime.Now,
+                        DateTime = null,
                         Name = null,
                         WasUsed = false,
                     });
                 }
-
-                _context.Tickets.Add(new Ticket
-                {
-
-                    WasUsed = true,
-                    Document = "1234",
-                    Name = "Danny",
-                    Entrance = null,
-                    DateTime = DateTime.Now,
-
-                });
-
-
             }
 
             await _context.SaveChangesAsync();

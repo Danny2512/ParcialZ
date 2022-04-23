@@ -1,18 +1,426 @@
-html {
-  font-size: 14px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;900&family=Roboto:ital,wght@0,100;0,700;1,300;1,400;1,500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
+
+.btn-1 i {
+    color: #ffffff;
+}
+
+/* Formulario login ===================================================================*/
+
+.form1 {
+    background-color: #fff;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 60px 20px 60px;
+    text-align: center;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px .5px rgba(0 0 0 .2);
+}
+
+    .form1 label {
+        color: black;
+    }
+
+.form-container {
+    display: grid;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+    .form-container .form-group1 {
+        position: relative;
+    }
+
+.form-input {
+    width: 100%;
+    background: none;
+    color: #706c6c;
+    border: none;
+    outline: 0px;
+    padding: 10px 20px;
+    border-bottom: 3px solid black;
+    font-family: 'Poppins', sans-serif;
+    color: black;
+}
+
+
+
+    .form-input:focus + .form-label,
+    .form-input:not(:placeholder-shown) + .form-label {
+        transform: translateY(-12px);
+        transform-origin: left top;
+        color: blue;
+    }
+
+
+.form-label {
+    cursor: pointer;
+    position: absolute;
+    color: black;
+    top: 0;
+    left: 5px;
+    transform: translateY(10px);
+    transition: all 0.2s, color .3s;
+}
+
+.form-link {
+    margin-top: 30px;
+}
+
+.link-login {
+    background-color: white;
+    list-style: none;
+    color: #252628;
+    display: block;
+    font-size: 100%;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 100%;
+    margin: auto;
+}
+
+    .link-login:hover {
+        color: black;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+        border: 2px solid #B19758;
+    }
+
+.link-login2 {
+    background-color: #252628;
+    padding: 15px 20px;
+    display: block;
+    width: 15%;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+    .link-login2:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+.link-login-verde {
+    background-color: #198754;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+    .link-login-verde:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+.link-login-rojo {
+    background-color: #DC3545;
+    padding: 10px 20px;
+    width: 120px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+    .link-login-rojo:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+.link-login-azul {
+    background-color: #0D6EFD;
+    padding: 10px 20px;
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+    .link-login-azul:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+.link-login-amarillo {
+    background-color: #FFC107;
+    padding: 10px 20px;
+    width: 120px;
+    text-align: center;
+    margin: 20px 0 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+    .link-login-amarillo:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+/*===========================Inicio Home=========================================*/
+.whatsapp {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    z-index: 50;
+}
+
+    .whatsapp:hover {
+        color: black;
+    }
+
+.whatsapp-icon {
+    margin-top: 13px;
+}
+/*===========================Fin Home=========================================*/
+/*Fin formulario login=====================================================================*/
+
+/*Inicio formulario ChangeUser=================================================================*/
+
+.ChangeUser {
+    position: fixed;
+    margin-left: 12%;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+
+/*Fin formulario ChangeUser=================================================================*/
+
+/*Inicio formulario ChangeUser=================================================================*/
+
+.ChagePassword {
+    margin-top: 6%;
+    margin-left: 0%;
+    border-radius: 10px;
+}
+
+/*Fin formulario ChangeUser=================================================================*/
+
+/*Inicio formulario IndexUsers=================================================================*/
+
+.IndexUsers {
+    position: relative;
+    background-color: #198754;
+    width: 107%;
+    height: 100%;
+    margin-left: -5%;
+}
+
+.BottomIndexUser {
+    position: absolute;
+    margin-left: 5%;
+    margin-top: 1%;
+    background-color: #252628;
+    padding: 15px 20px;
+    width: 15%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+    .BottomIndexUser:hover {
+        color: white;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+/*Fin formulario IndexUsers=================================================================*/
+/*Inicio de ResetPassword =========================================================================*/
+.ResetPassword {
+    height: 40%;
+    width: 40%;
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 10%;
+}
+/*Fin formulario ResetPassword=================================================================*/
+/*Inicio de header =========================================================================*/
+.container-total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-nav {
+    background-color: white;
+    list-style: none;
+    color: #252628;
+    display: block;
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+    margin: 0px 5px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+    .link-nav:hover {
+        color: black;
+        background-color: #B19758;
+        transition: ease-in-out .2s;
+    }
+
+.NavLogo img {
+    width: 150px;
+    margin: 10px 20px;
+}
+
+.centar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.FontLogin {
+    position: fixed;
+    margin-top: -5.9%;
+    margin-left: -9.2%;
+    background: url(../images//Catholic.jpg);
+    background-size: 100%;
+    height: 100%;
+    width: 102%;
+    z-index: 0;
+}
+
+.Login {
+    position: fixed;
+    margin-top: 100px;
+}
+
+header {
+    background-color: #252628;
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+
+
+.btnLogin {
+    cursor: pointer;
+    border: 1px solid #3498db;
+    background-color: transparent;
+    height: 40px;
+    width: 150px;
+    color: white;
+    font-size: 1em;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+}
+
+    .btnLogin:hover {
+        color: white;
+    }
+
+.nav-item2 a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 5px;
+}
+
+    .nav-item2 a:hover {
+        color: #B19758;
+    }
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+    html {
+        font-size: 16px;
+    }
+}
+/* Home ===================================================================*/
+
+@charset "utf-8";
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 370px;
+    border: 1px solid lightgray;
+    box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+    border-radius: 15px;
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.card_title {
+    font-size: 24px;
+    padding: 10px 10px 0 10px;
+}
+
+.card_body {
+    padding: 10px;
+}
+
+.card_foot {
+    background: #6699ff;
+    border-radius: 0 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.foot a {
+    text-decoration: none;
+    color: white;
+}
+
+    .foot a:after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        content: ""
+    }

@@ -40,7 +40,7 @@ namespace ParcialZ.Controllers
             Ticket ticket = await _context.Tickets
                 .FirstOrDefaultAsync(t => t.Id == id);
 
-            if (id <= 0 || id >= 5002)
+            if (id <= 0 || id >= 5001)
             {
                 TempData["Message"] = "Error de boleta, no existe";
 
@@ -131,7 +131,7 @@ namespace ParcialZ.Controllers
                     Ticket ticket = await _context.Tickets.FindAsync(model.Id);
                     ticket.Document = model.Document;
                     ticket.Name = model.Name;
-                    ticket.DateTime = model.DateTime;
+                    ticket.DateTime = DateTime.Now;
                     ticket.WasUsed = true;
                     ticket.Entrance = await _context.Entrances.FindAsync(model.EntranceId);
                     _context.Update(ticket);

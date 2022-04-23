@@ -1,29 +1,34 @@
-﻿
-@model ParcialZ.Models.TicketViewModel;
+﻿@model ParcialZ.Models.TicketViewModel;
 
 @{
     ViewData["Title"] = "EditTicket";
 }
 
-<h1>Registro ticket</h1>
+<h1 class="col-md-12 offset-md-4">Registro Ticket</h1>
 
 <hr />
-<div class="row">
-    <div class="col-md-12">
-        <form asp-action="EditTicket" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Entrances" />
-            <input type="hidden" asp-for="EntranceId" />
-            <partial name="_EditTicket"/>
-            <div class="form-group mt-2">
-                 <input type="submit" value="Validar" class="btn btn-outline-primary" />
-                <a asp-action="CheckTicket" class="btn btn-outline-secondary">Regresar</a>
+<div class="FontLogin">
+    <div class="row">
+        <div class="col-md-12 offset-md-4 ">
+            <div class="Login" style="width: 450px; height: 400px">
+                <form asp-action="EditTicket" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Entrances" />
+                    <input type="hidden" asp-for="EntranceId" />
+                    <partial name="_EditTicket" />
+                    <div class="form-group mt-2">
+                        <input type="submit" value="Validar" class="btn btn-outline-primary" />
+                        <a asp-action="CheckTicket" class="btn btn-outline-secondary">Regresar</a>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }
 
